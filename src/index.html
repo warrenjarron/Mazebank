@@ -7,41 +7,57 @@
   <title>Document</title>
   <link href="/output.css" rel="stylesheet">
 </head>
-<body class="bg-sky-900">
-  <form class="bg-stone-600 text-center h-4/5 " >  
-    <h1 class="">MAZEBANK</h1>
+<body class="bg-slate-400 ">
+  <form class=" text-center h-4/5  grid grid-cols-1 shadow-lg">
+    <h1 class="text-white shadow-xl">MAZEBANK</h1>
     <p class=""><span class=""> </span></p>
     <div class=""></div>
   <div class="m-1 grid justify-center">
     <div class="grid justify-center">
       <div class="grid justify-center">
-        <label class="">Titulaire du compte</label>
-        <input id="" class="m-5" type="text" autocomplete="off" />
+        <label class="text-white">Titulaire du compte</label>
+        <input placeholder="Titulaire du compte" id="name" class="m-5 text-center" type="text" autocomplete="name" />
        
       </div>
       <div class="grid justify-center">
-        <label id="account-number" class="">Votre numéro de compte</label>
-        <input class="m-5" type="text" autocomplete="off" /> <button id="submit-user">envoyer</button>
+        <label id="account-number" class="text-white">Votre numéro de compte</label>
+        <input placeholder="numéro de compte" class="m-5 text-center" type="text" autocomplete="off" /> 
         
       </div>
       <div class="grid justify-center" >
-        <label, class="" >IBAN</label,>
-        <input class="m-5" type="text" autocomplete="off" />
+        <label, class="text-white" >IBAN</label,>
+        <input placeholder="IBAN" class="m-5 text-center" type="text" autocomplete="off" />
        
       </div>
     </div>
 
     <div class="grid justify-center">
       <div class="grid justify-center">
-        <label class="" >RIB </label>
-        <input class="" type="text" autocomplete="off" />
+        <label class="text-white" >RIB </label>
+        <input placeholder="RIB" class="text-center" type="text" autocomplete="off"  />
       </div>
+    </div>
+  </div>
+  <div class="text-center m-4">
+    
+    <button id="btndepot" class="text-white bg-gray-600 rounded-md" type="button">déposer </button>
+    <label class="text-white grid justify-center" for="depot"></label>
+    <input id="inputdepot" placeholder="déposer" type="text" autocomplete="cc-number" class="text-center">
+    <p class="text-white">
+      il vous reste <span id="result" ></span>$
+    </p>
+    <div>
+      <button  class="bg-white rounded-md w-20 m-3">Envoyer</button>
     </div>
   </div>
   <div>
 
-    <button class="bg-white">Envoyer le message</button>
+    <label  class="take text-white">retirer de l'argent</label>
+    <input id="inputtake" placeholder="retirer" type="text" class="text-center" autocomplete="cc-number"> 
+    <button class="bg-white" id="btnTake" type="button"> retirer</button>
   </div>
 </form>
+
+
 </body>
 </html>

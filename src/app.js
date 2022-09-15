@@ -30,33 +30,33 @@ import  "@fortawesome/fontawesome-free/js/all";
 // }
 // button.addEventListener("click",darkMode);
 
-let user = {
-    numberAccount: 12456789, 
-    iban: FR12345678,
-    codeBank: 456789,
-    codeGuichet: "00345",
-    keyRib: 45,
-    };
+// let user = {
+//     numberAccount: 12456789, 
+//     iban: FR12345678,
+//     codeBank: 456789,
+//     codeGuichet: "00345",
+//     keyRib: 45,
+//     };
 
-    let resultAccount = document.getElementById("results-account");
+//     let resultAccount = document.getElementById("results-account");
 
-    resultAccount,append(user.numberAccount);
+//     resultAccount,append(user.numberAccount);
 
-    class User {
-        constructor(numberAccount, iban , codeBank , codeGuichet , keyRib) { 
-        this. numberAccount = numberAccount;
-        this. iban = iban;
-        this.codeBank = codeBank;
-        this. codeGuichet = codeGuichet;
-        this.keyRib = keyRib;
-    };
-};
+//     class User {
+//         constructor(numberAccount, iban , codeBank , codeGuichet , keyRib) { 
+//         this. numberAccount = numberAccount;
+//         this. iban = iban;
+//         this.codeBank = codeBank;
+//         this. codeGuichet = codeGuichet;
+//         this.keyRib = keyRib;
+//     };
+// };
 
-let warren = new User(12456789,"FR12345678", 456789, "00345", 45 );
+// let warren = new User(12456789,"FR12345678", 456789, "00345", 45 );
 
-let resultsIban = ducument.getElementById("results-iban");
+// let resultsIban = ducument.getElementById("results-iban");
 
-resultsIban.append(user1.user2)
+// resultsIban.append(user1.user2)
 
 // let initial = 0;
 // let array = [ 1, 2, 3, 4,];
@@ -134,3 +134,58 @@ resultsIban.append(user1.user2)
 
 //         export default Button;
 //     } 
+
+// MAZEBANK
+// const Input = (type, id) => {
+//     let input = document.createElement("input");
+//     input.type = type || "text";
+//     input.id = id || "default";
+//     input.classList.add("border-2")
+//     input.classList.add("border-red-500")
+//     return input;
+//   }
+  
+//   let input2 = Input("number", "");
+//   let input3 = Input("text", "");
+//   let input4 = Input("date", "");
+//   let input5 = Input("color", "");
+//   console.log(input2, input3, input4, input5);
+  
+//   const root = document.getElementById("root");
+//   root.append(input2);
+//   root.append(input3);
+//   root.append(input4);
+//   root.append(input5);
+
+const inputDepot = document.getElementById("inputdepot")
+const button = document.getElementById("btndepot")
+const result = document.getElementById("result")
+
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min ) );
+  }
+let sold = getRndInteger (0, 1000)
+ let accountNumber = getRndInteger `FR` + (1119481889,1881881151) 
+result.innerHTML = sold
+
+const calculate = () => {
+    let results = parseInt(inputDepot.value);
+    let total = (sold += results);
+    result.innerHTML = total;
+    return total;
+};
+
+button.addEventListener("click",calculate )
+// retirer de l'argent
+const  btnTake = document.getElementById("btnTake")  
+const inputtake = document.getElementById("inputtake")
+const negativecalcul = () => {
+    let results = parseInt(inputtake.value);
+    let total = (sold -= results);
+    result.innerHTML = total;
+    return total;
+};
+
+btnTake.addEventListener("click",negativecalcul )
+
