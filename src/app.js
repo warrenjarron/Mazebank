@@ -189,3 +189,15 @@ const negativecalcul = () => {
 
 btnTake.addEventListener("click",negativecalcul )
 
+const  newUser = () => {
+    let user = new addUser (newName.value, newAccount.value, newRib.value);
+    let results = ((resultName.innerHTML = user.name));
+}
+resultName.append ((resultName.innerHTML = user.name));
+
+
+
+const createElement = (Element) => {
+    let element = document.createElement(element)
+    return elem;
+}
