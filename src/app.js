@@ -1,6 +1,8 @@
-import _ from "lodash";
+import _, { keyBy } from "lodash";
 import "./assets/css/styles.css";
 import  "@fortawesome/fontawesome-free/js/all";
+
+import virement from "../components/virement";
 // import Icon from './assets/img/';
 
 // function component() {
@@ -156,17 +158,24 @@ import  "@fortawesome/fontawesome-free/js/all";
 //   root.append(input3);
 //   root.append(input4);
 //   root.append(input5);
-
+// ajouter de l'argent
 const inputDepot = document.getElementById("inputdepot")
 const button = document.getElementById("btndepot")
 const result = document.getElementById("result")
 
-
+// chiffre random
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min ) );
   }
+  // faire entré le formulaire
+    inputDepot.addEventListener("keydown", (key) => {
+        console.log(key.code);
+        if (key.code === "Enter") {
+          alert("a");
+        }
+      });
 let sold = getRndInteger (0, 1000)
- let accountNumber = getRndInteger `FR` + (1119481889,1881881151) 
+//  let accountNumber = getRndInteger `FR` + (1119481889,1881881151) 
 result.innerHTML = sold
 
 const calculate = () => {
@@ -188,16 +197,22 @@ const negativecalcul = () => {
 };
 
 btnTake.addEventListener("click",negativecalcul )
+// let sold = -;
+// let total = -50;
 
-const  newUser = () => {
-    let user = new addUser (newName.value, newAccount.value, newRib.value);
-    let results = ((resultName.innerHTML = user.name));
-}
-resultName.append ((resultName.innerHTML = user.name));
+// const test = () => {
+//     if (result <= total){
+
+//     }
+// };
+// const  newUser = () => {
+//     let user = new addUser (newName.value, newAccount.value, newRib.value);
+//     let results = ((resultName.innerHTML = user.name));
+// }
+// resultName.append ((resultName.innerHTML = user.name));
 
 
 
-const createElement = (Element) => {
-    let element = document.createElement(element)
-    return elem;
-}
+// const createElement = (Element) => {
+//     let element = document.createElement(element)
+//     return elem;
