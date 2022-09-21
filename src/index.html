@@ -8,8 +8,8 @@
   <link href="/output.css" rel="stylesheet">
 </head>
 <body class="bg-slate-400 ">
-  <form class=" text-center h-4/5  flex flex-col shadow-lg">
-    <h1 class="text-white shadow-xl text-4xl bg-yellow-600">MAZEBANK</h1>
+  <form class=" text-center h-4/5  grid  shadow-lg ">
+    <h1 class="text-white shadow-xl shadow-black text-4xl mb-4  grid bg-amber-200">MAZEBANK</h1>
     <p class=""><span class=""> </span></p>
     <div class=""></div>
   <div class="m-1 grid justify-center">
@@ -58,14 +58,17 @@
   </div>
 </form>
 <hr>
-<div class="border-white  p-1">
-  <button id="btnSubmit" class="text-white bg-gray-600 rounded-md" type="button">déposer </button>
-  <label class="text-white grid justify-center" for="depot"></label>
-  <input id="inputSubmit" placeholder="saisir votre montant" type="text" autocomplete="cc-number" class="text-center">
-  <p class="text-white">
-    il vous reste <span id="results" ></span>$
-  </p>
-  </div>
+<div class="bg-gray-500 grid w-48  m-4 rounded-md h-28" >
+
+  <div class="border-white  p-1">
+    <label class="text-white grid justify-center" for="depot"></label>
+    <input id="inputSubmit" placeholder="saisir votre montant" type="text" autocomplete="cc-number" class="text-center">
+    <p class="text-white">
+      il vous reste <span id="results" ></span>$
+    </p>
+    <button id="btnSubmit" class="text-white bg-gray-300 rounded-md p-1 " type="button">déposer </button>
+    </div>
+</div>
 
 </body>
 </html>
