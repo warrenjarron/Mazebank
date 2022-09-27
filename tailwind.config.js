@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+      'mazebank': "url('../img/MAZEBANK-IMAGE-4.png')",
+    }
   },
+},
   plugins: [],
-}
+};
