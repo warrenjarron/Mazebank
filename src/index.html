@@ -12,7 +12,7 @@
 </head>
 <body class="bg-mazebank bg-cover">
   <!-- header -->
-  <form class=" text-center h-4/5  grid  rounded-lg  ">
+  <form class=" text-center h-4/5  grid grid-cols-1 rounded-lg  ">
     <div class=" rounded-xl w-auto ">
       <div class="bg-slate-500 opacity-75 hover:opacity-100 ">
   <i class="fa-solid fa-house text-white h-5"></i>
@@ -28,78 +28,84 @@
 </div>
       <p class=""><span class=""> </span></p>
       <!-- formulaire  -->
-    <div data-aos="flip-down" class="m-1 grid justify-center h-96">
-      <div class="grid justify-center">
-        <div class="grid justify-center bg-slate-500 rounded-lg">
-          <label class="text-slate-100">Titulaire du compte</label>
-          <input placeholder="Titulaire du compte" id="input-name" class="m-5 text-center" type="text" autocomplete="name" />
-         
+      <div data-aos="flip-down" class="m-1 grid justify-start h-96 lg:grid lg:grid-cols-2 mt-5">
+        <div>
+          <!-- col 1 -->
+          <div class="grid justify-center bg-slate-500 rounded-lg">
+            <label class="text-slate-100">Titulaire du compte</label>
+            <input placeholder="Titulaire du compte" id="input-name" class="m-5 text-center" type="text" autocomplete="name" />
+          </div>
+          <div class="grid justify-center mt-5 bg-slate-500 rounded-lg">
+            <label class="text-slate-100">Votre numéro de compte</label>
+            <input placeholder="numéro de compte" class="m-5 text-center" type="number" autocomplete="off" id="input-account" /> 
+          </div>
+          <div class="grid justify-center bg-slate-500 rounded-lg mt-5" >
+            <label class="text-slate-100" >IBAN</label>
+            <input placeholder="IBAN" class="m-5 text-center" type="number" autocomplete="off"  id="input-iban"/>
+          </div>
+          <div class="grid justify-center">
+            <label class="text-slate-100" >RIB </label>
+            <input placeholder="RIB" class="text-center h-5" type="number" autocomplete="off" id="input-rib" />
+          </div>
+          <div class="grid justify-center">
+            <label class="text-slate-100" >SOLDE </label>
+            <input placeholder="solde" class="text-center h-5" type="number" autocomplete="off" id="input-sold" />
+          </div>
+          <button type="button" id="btn-formulaire" class="bg-slate-600 rounded-lg h-7   mt-5 text-white hover:bg-yellow-500" > envoyer</button>
         </div>
-        <div class="grid justify-center mt-5 bg-slate-500 rounded-lg">
-          <label class="text-slate-100">Votre numéro de compte</label>
-          <input placeholder="numéro de compte" class="m-5 text-center" type="number" autocomplete="off" id="input-account" /> 
+        <div data-aos="fade-right" class="grid  text-slate-600 justify-start text-start ml-5 bg-yellow-200  rounded-lg pl-2 shadow-lg shadow-slate-300   h-56    ">
+          <!-- col 2 -->
           
+          <table class="flex flex-row  justify-start ">
+           <tr class="">
+             Nom du Titulaire:
+             <span id="results-name"></span>
+           </tr>
+           <hr>
+            <tr class="">
+              code banque:FR
+              <span id="results-account"></span>
+            </tr>
+            <br>
+            <hr class="text-slate-100">
+            <tr>
+              IBAN:
+              <span id="results-iban" ></span>
+            </tr>
+            <br>
+            <hr class="text-slate-100">
+            <tr>
+              RIB:
+              <p></p>
+              <span id="results-rib"></span>
+            </tr>
+            <hr>
+            <tr>
+            solde:
+             
+             <span id="results-sold"></span>$
+            </tr>
+          </table>
         </div>
-        <div class="grid justify-center bg-slate-500 rounded-lg mt-5" >
-          <label, class="text-slate-100" >IBAN</label,>
-          <input placeholder="IBAN" class="m-5 text-center" type="number" autocomplete="off"  id="input-iban"/>
-         
-        </div>
+        <!-- <div class="grid justify-center"> -->
       </div>
-  
+<!--       
       <div class="grid justify-center mt-5 bg-slate-500 rounded-lg h-20">
-        <div class="grid justify-center">
-          <label class="text-slate-100" >RIB </label>
-          <input placeholder="RIB" class="text-center h-5" type="number" autocomplete="off" id="input-rib" />
-        </div>
-      </div>
-      <div class="grid justify-center mt-5 bg-slate-500 rounded-lg h-20">
-        <div class="grid justify-center">
-          <label class="text-slate-100" >SOLDE </label>
-          <input placeholder="solde" class="text-center h-5" type="number" autocomplete="off" id="input-sold" />
-        </div>
-      </div>
-      <button type="button" id="btn-formulaire" class="bg-slate-600 rounded-lg h-7   mt-5 text-white hover:bg-yellow-500" > envoyer</button>
-    </div>
-  </form>
-  <!-- result form -->
-  <div data-aos="fade-right" class="flex flex-col text-slate-600 justify-start text-start ml-10  bg-yellow-200 w-60 rounded-lg pl-2 shadow-lg shadow-slate-300 mt-44 ">
-     <table class="flex flex-row  justify-start ">
-      <tr class="">
-        Nom du Titulaire:
-        <span id="results-name"></span>
-      </tr>
-      <hr>
-       <tr class="">
-         code banque:FR
-         <span id="results-account"></span>
-       </tr>
-       <br>
-       <hr class="text-slate-100">
-       <tr>
-         IBAN:
-         <span id="results-iban" ></span>
-       </tr>
-       <br>
-       <hr class="text-slate-100">
-       <tr>
-         RIB:
-         <p></p>
-         <span id="results-rib"></span>
-       </tr>
-       <hr>
-       <tr>
-       solde:
         
-        <span id="results-sold"></span>$
-       </tr>
-     </table>
-    
-  </div>
+      </div>
+      <div class="grid justify-center mt-5 bg-slate-500 rounded-lg h-20">
+        
+      </div> -->
     </div>
-<!-- SECTION DEPOT/RETRAIT -->
+    <!-- result form -->
+  </div>
+</form>
 
-<div class="text-yellow-200 text-3xl text-center bg-slate-500 opacity-75 w-full border-t-4 border-t-yellow-400  mt-14">
+<div data-aos="fade-right" class="grid grid-rows-1 text-slate-600 justify-start text-start ml-9  bg-yellow-200 w-60 rounded-lg pl-2 shadow-lg shadow-slate-300 mt-44 ">
+</div>
+  <!-- SECTION DEPOT/RETRAIT -->
+
+<div class="text-yellow-200 text-3xl text-center bg-slate-500 opacity-75 w-full border-t-4 border-t-yellow-400   mt-40  ">
   <i class="fa-solid fa-hand-holding-dollar"></i>
   <h1>Section dépot/retrait </h1>
 </div>
@@ -131,7 +137,7 @@
   <h1>Section Virement </h1>
 </div>
 </div>
-
+<i class="fa-solid fa-user text-white"></i>
 <select data-aos="zoom-in-down" class="text-center w-24" name="warren" id="" >
   <option class="" value="01">warren</option>
   <option class="" value="02">michel</option>
@@ -158,12 +164,18 @@
 </div>
 
 
-<footer class="bg-slate-500 w-screen h-40 mt-20 grid grid-cols-1 border-t-4 border-t-yellow-400 ">
-  <div>
+<footer class="bg-slate-500 w-screen h-48 mt-20 grid grid-cols-2 border-t-4 border-t-yellow-400  justify-center>
+  <div class="grid grid-cols-3" >
     <img src="./assets/img/logo-cb.jpg" alt="" width="10%" height="auto">
-    <img src="./assets/img/logo-paypal.jpg" alt="" width="10%" height="auto">
+    <div class="" >
+
+      <img src="./assets/img/logo-paypal.jpg" alt="" width="10%" height="auto">
+
+    </div>
+         <div class="" >
+      <img src="./assets/img/maze-bank-logo2.svg"height="auto" width="10%" class="justify-center ">
     
-    
+          </div>
    
   </div>
 </footer>
