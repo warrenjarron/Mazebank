@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>mazebank</title>
   <link href="/output.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -15,45 +15,48 @@
   <form class=" text-center h-4/5  grid grid-cols-1 rounded-lg  ">
     <div class=" rounded-xl w-auto ">
       <div class="bg-slate-500 opacity-75 hover:opacity-100 ">
-  <i class="fa-solid fa-house text-white h-5"></i>
-  <i class="fa-solid fa-envelope text-white h-5"></i>
-  <i class="fa-sharp fa-solid fa-gears text-white h-5"></i>
-  <div data-aos="zoom-out" class="grid grid-cols-2 ml-40 mt-5">
-    <div  class=" flex flex-row-reverse  ">
-
-      <h1 class="text-white  text-4xl mb-4 ">MAZEBANK</h1>
-    </div>
-    <img src="./assets/img/maze-bank-logo2.svg"height="auto" width="15%" class=" ">
-  </div>
-</div>
+        <div data-aos="zoom-out" class="grid grid-cols-3  mt-2 ">
+          <div  class=" flex flex-row-reverse  ">
+            
+            <h1 class="text-white  text-4xl mb-4 ">MAZEBANK</h1>
+          </div>
+          <div>
+            
+            <img src="./assets/img/maze-bank-logo2.svg"height="auto" width="15%" class=" ">
+          </div>
+        </div>
+        <i class="fa-solid fa-house text-white h-5 mr-5"></i>
+        <i class="fa-solid fa-envelope text-white h-5"></i>
+        <i class="fa-sharp fa-solid fa-gears text-white h-5 ml-5"></i>
+      </div>
       <p class=""><span class=""> </span></p>
       <!-- formulaire  -->
-      <div data-aos="flip-down" class="m-1 grid justify-start h-96 lg:grid lg:grid-cols-2 mt-5">
+      <div data-aos="flip-down" class="m-1 grid justify-start h-96 lg:grid lg:grid-cols-2 mt-5 w-3/6">
         <div>
           <!-- col 1 -->
           <div class="grid justify-center bg-slate-500 rounded-lg">
             <label class="text-slate-100">Titulaire du compte</label>
-            <input placeholder="Titulaire du compte" id="input-name" class="m-5 text-center" type="text" autocomplete="name" />
+            <input placeholder="Titulaire du compte" id="input-name" class="m-5 text-center rounded-lg" type="text" autocomplete="name" />
           </div>
           <div class="grid justify-center mt-5 bg-slate-500 rounded-lg">
             <label class="text-slate-100">Votre numéro de compte</label>
-            <input placeholder="numéro de compte" class="m-5 text-center" type="number" autocomplete="off" id="input-account" /> 
+            <input placeholder="numéro de compte" class="m-5 text-center rounded-lg" type="number" autocomplete="off" id="input-account" /> 
           </div>
           <div class="grid justify-center bg-slate-500 rounded-lg mt-5" >
             <label class="text-slate-100" >IBAN</label>
-            <input placeholder="IBAN" class="m-5 text-center" type="number" autocomplete="off"  id="input-iban"/>
+            <input placeholder="IBAN" class="m-5 text-center rounded-lg" type="number" autocomplete="off"  id="input-iban"/>
           </div>
-          <div class="grid justify-center">
+          <div class="grid justify-center bg-slate-500 rounded-lg mt-5">
             <label class="text-slate-100" >RIB </label>
-            <input placeholder="RIB" class="text-center h-5" type="number" autocomplete="off" id="input-rib" />
+            <input placeholder="RIB" class="text-center m-5 rounded-lg" type="number" autocomplete="off" id="input-rib" />
           </div>
-          <div class="grid justify-center">
+          <div class="grid justify-center bg-slate-500 rounded-lg mt-5 ">
             <label class="text-slate-100" >SOLDE </label>
-            <input placeholder="solde" class="text-center h-5" type="number" autocomplete="off" id="input-sold" />
+            <input placeholder="solde" class="text-center m-5 rounded-lg" type="number" autocomplete="off" id="input-sold" />
           </div>
-          <button type="button" id="btn-formulaire" class="bg-slate-600 rounded-lg h-7   mt-5 text-white hover:bg-yellow-500" > envoyer</button>
+          <button type="button" id="btn-formulaire" class="bg-slate-600 rounded-lg    mt-10 text-white hover:bg-yellow-500  p-2" > envoyer</button>
         </div>
-        <div data-aos="fade-right" class="grid  text-slate-600 justify-start text-start ml-5 bg-yellow-200  rounded-lg pl-2 shadow-lg shadow-slate-300   h-56    ">
+        <div data-aos="fade-right" class="  text-slate-600 justify-start text-start ml-10 bg-yellow-200  rounded-lg pl-2 shadow-lg shadow-slate-300   h-44    ">
           <!-- col 2 -->
           
           <table class="flex flex-row  justify-start ">
@@ -103,29 +106,31 @@
 
 <div data-aos="fade-right" class="grid grid-rows-1 text-slate-600 justify-start text-start ml-9  bg-yellow-200 w-60 rounded-lg pl-2 shadow-lg shadow-slate-300 mt-44 ">
 </div>
-  <!-- SECTION DEPOT/RETRAIT -->
+<!-- SECTION DEPOT/RETRAIT -->
 
 <div class="text-yellow-200 text-3xl text-center bg-slate-500 opacity-75 w-full border-t-4 border-t-yellow-400   mt-40  ">
   <i class="fa-solid fa-hand-holding-dollar"></i>
   <h1>Section dépot/retrait </h1>
 </div>
-<div data-aos="zoom-in" class=" mt-10 text-start ml-10 bg-slate-600 w-52 rounded-lg h-32">
- 
-  <label class="text-slate-200 ml-20 grid  mt-5" for="depot">dépot</label>
-  <input id="inputdepot" placeholder="saisir votre montant" type="text" autocomplete="cc-number" class="text-center ml-3 mt-2">
+<div class="grid grid-cols-2">
+<div data-aos="zoom-in" class="bg-slate-600 w-60 h-32 ml-10 mt-2  rounded-lg text-center shadow-lg shadow-black ">
+  <label class="text-slate-200 ml-5  " for="depot">dépot</label>
+  <input id="inputdepot" placeholder="saisir votre montant" type="text" autocomplete="cc-number" class="text-center rounded-lg ml-3 mt-2">
   <p class="text-yellow-500 text-center">
-    il vous reste <span id="result" ></span>$
-  </p>
-  <button id="btndepot" class="text-slate-600 bg-white rounded-md h-8 w-32 ml-10 mt-2 hover:bg-yellow-500" type="button">déposer </button>
-  <!-- <div >
-    <button class="bg-yellow-200 text-slate-600 rounded-md w-48 mt-3 ml-2">Générer de l'argent aléatoirement</button>
-  </div> -->
-</div>
-<div data-aos="zoom-in" class="bg-slate-600 w-60 h-24 ml-10 rounded-lg text-center mt-5">
-
-  <label  class="take text-white  ">retirer de l'argent</label>
-  <input id="inputtake" placeholder="retirer" type="text" class="text-center" autocomplete="cc-number"> 
-  <button class="bg-white rounded-md h-7 w-20 mt-2 hover:bg-yellow-500 text-slate-600" id="btnTake" type="button"> retirer</button>
+      il vous reste <span id="result" ></span>$
+    </p>
+    <button id="btndepot" class="text-slate-600 bg-white rounded-md h-8 w-32  mt-2 hover:bg-yellow-500" type="button">déposer </button>
+    
+    <!-- <div >
+      <button class="bg-yellow-200 text-slate-600 rounded-md w-48 mt-3 ml-2">Générer de l'argent aléatoirement</button>
+    </div> -->
+  </div>
+  
+  <div data-aos="zoom-in" class=" mt-2  text-center ml-10 bg-slate-600 w-52 rounded-lg h-32 shadow-lg shadow-black">
+    <label  class="take text-white  ">retirer de l'argent</label>
+    <input id="inputtake" placeholder="retirer" type="text" class="text-center mt-3 rounded-lg" autocomplete="cc-number"> 
+    <button class="bg-white rounded-md h-7 w-20 mt-7 hover:bg-yellow-500 text-slate-600" id="btnTake" type="button"> retirer</button>
+  </div>
 </div>
 <!-- SECTION VIREMENT -->
 
@@ -149,10 +154,10 @@
 
 <div class="text-white ml-3 grid grid-cols-1 " data-aos="zoom-out-right">
   <div>
-    <input placeholder="Nom du bénéficiaire" id="input-beneficiary-name" class="m-5 text-center text-slate-800" type="text" autocomplete="name" />
-    <input placeholder="Numéro de compte" id="input-account-number" class="m-5 text-center text-slate-800" type="number" autocomplete="name" />
-    <input placeholder="RIB" id="input-ribb" class="m-5 text-center text-slate-800" type="number" autocomplete="name" />
-    <input placeholder="IBAN" id="input-ibann" class="m-5 text-center text-slate-800" type="number" autocomplete="name" />
+    <input placeholder="Nom du bénéficiaire" id="input-beneficiary-name" class="m-5 text-center rounded-lg text-slate-800" type="text" autocomplete="name" />
+    <input placeholder="Numéro de compte" id="input-account-number" class="m-5 text-center rounded-lg text-slate-800" type="number" autocomplete="name" />
+    <input placeholder="RIB" id="input-ribb" class="m-5 text-center rounded-lg text-slate-800" type="number" autocomplete="name" />
+    <input placeholder="IBAN" id="input-ibann" class="m-5 text-center rounded-lg text-slate-800" type="number" autocomplete="name" />
     <button type="button" class="bg-slate-600 rounded-lg p-1" id="btn-beneficiary">envoyer</button>
   </div>
   <span>Nom du bénéficiaire:</span> <span id="results-beneficiary-name"></span>
@@ -164,7 +169,7 @@
 </div>
 
 
-<footer class="bg-slate-500 w-screen h-48 mt-20 grid grid-cols-2 border-t-4 border-t-yellow-400  justify-center>
+<footer class="bg-slate-500 w-screen h-48 mt-20 grid grid-cols-2 border-t-4 border-t-yellow-400   justify-center>
   <div class="grid grid-cols-3" >
     <img src="./assets/img/logo-cb.jpg" alt="" width="10%" height="auto">
     <div class="" >
